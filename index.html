@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo interativo de adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload='gerarNumeroAleatorio()'>
+    <main>
+        <h1>"Adivinhe o número"</h1>
+        <p>Estou pensando em um número de 1 a 100, você só tem 10 tentativas</p>
+        <div class="botao">
+            <input type="number" s
+                tep="1"
+                min="1" 
+                max="100" 
+                name="inputNumero"
+                id="inputNumero" 
+                onblur="validarNumeroDigitado(this.value)" 
+                onclick="ativarBtnAdivinhe()">
+
+            <button id="btnAdivinhe" onclick="jogar()"> Adivinhar</button>
+        </div>
+        <p class='centro' id='aviso'></p>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html> 
